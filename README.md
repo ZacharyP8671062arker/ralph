@@ -79,13 +79,13 @@ Add to `~/.config/amp/settings.json`:
 
 ```json
 {
-  "amp.experimental.autoHandoff": { "context": 90 }
+  "amp.experimental.autoHandoff": { "context": 85 }
 }
 ```
 
 This enables automatic handoff when context fills up, allowing Ralph to handle large stories that exceed a single context window.
 
-> **Note:** I've found setting the context threshold to `85` instead of `90` works better in practice — it gives the agent a bit more breathing room to wrap up cleanly before handing off.
+> **Note:** Setting the context threshold to `85` (rather than `90`) gives the agent more breathing room to wrap up cleanly before handing off. I've found this avoids mid-task cutoffs in practice.
 
 ## Workflow
 
@@ -106,19 +106,3 @@ Use the Ralph skill to convert the markdown PRD to JSON:
 ```
 Load the ralph skill and convert tasks/prd-[feature-name].md to prd.json
 ```
-
-### 3. Run Ralph
-
-```bash
-bash scripts/ralph/ralph.sh
-```
-
-Ralph will loop through each item in `prd.json`, running your AI coding tool for each one and committing progress along the way.
-
-> **Tip:** Run Ralph in a `tmux` or `screen` session so it can continue working even if your terminal disconnects.
-
-## Tips & Troubleshooting
-
-- If Ralph gets stuck on a task, you can manually edit `progress.txt` or `prd.json` to skip or re-order items.
-- Check git history to see what each iteration did — every completed task gets its own commit.
-- For very large PRDs, break them into smaller focused files and run Ralph on each separately.
