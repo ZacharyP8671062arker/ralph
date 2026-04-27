@@ -45,3 +45,8 @@ npm run dev
 - Memory persists via git history, `progress.txt`, and `prd.json`
 - Stories should be small enough to complete in one context window
 - Always update AGENTS.md with discovered patterns for future iterations
+
+## Personal Notes
+
+- I default to `--tool claude` since that's what I have access to; swap if you add Amp later
+- Keep PRD stories granular — I found that anything touching more than ~2 files tends to stall mid-iteration
