@@ -107,10 +107,16 @@ Use the Ralph skill to convert the markdown PRD to JSON:
 Load the ralph skill and convert tasks/prd-[feature-name].md to prd.json
 ```
 
-This creates `prd.json` with user stories structured for autonomous execution.
-
 ### 3. Run Ralph
 
 ```bash
-# Using Amp (defaul
+bash scripts/ralph/ralph.sh
 ```
+
+Ralph will loop through each item in `prd.json`, running your chosen AI coding tool for each one, and updating `progress.txt` as it goes.
+
+> **Tip:** You can monitor progress in real time by running `tail -f progress.txt` in a separate terminal.
+
+## Upstream
+
+This is a personal fork of [snarktank/ralph](https://github.com/snarktank/ralph). For the canonical version, refer to the upstream repository.
