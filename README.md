@@ -113,12 +113,12 @@ Load the ralph skill and convert tasks/prd-[feature-name].md to prd.json
 bash scripts/ralph/ralph.sh
 ```
 
-Ralph will loop until all items in `prd.json` are marked complete.
+Ralph will loop through each item in `prd.json`, running your AI coding tool for each one and committing progress along the way.
 
-> **Personal tip:** I keep a separate terminal tab open with `git log --oneline -20` running so I can watch progress accumulate in real time as Ralph commits each completed task.
+> **Tip:** Run Ralph in a `tmux` or `screen` session so it can continue working even if your terminal disconnects.
 
-## Tips
+## Tips & Troubleshooting
 
-- Keep PRD items small and well-scoped — Ralph works best with clear, discrete tasks
-- Review `progress.txt` between runs to understand what was completed
-- If Ralph gets stuck, you can manually edit `prd.json` to skip or reword a task
+- If Ralph gets stuck on a task, you can manually edit `progress.txt` or `prd.json` to skip or re-order items.
+- Check git history to see what each iteration did — every completed task gets its own commit.
+- For very large PRDs, break them into smaller focused files and run Ralph on each separately.
