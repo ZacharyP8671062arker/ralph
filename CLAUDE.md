@@ -72,6 +72,6 @@ Only update CLAUDE.md if you have **genuinely reusable knowledge** that would he
 
 ## Personal Notes
 
-<!-- My fork is primarily for learning how autonomous agents handle iterative feature work.
-     Keeping one story per run (step 4) is intentional - resist the urge to batch multiple stories
-     even when they seem trivially small. It keeps commits atomic and progress.txt readable. -->
+<!-- Personal reminders for my fork -->
+- After finishing a session, run `git push origin <branch>` so progress is backed up to my fork.
+- If the PRD has no remaining `passes: false` stories, don't just stop — check if there are obvious cleanup tasks (unused imports, missing tests) before closing out.
