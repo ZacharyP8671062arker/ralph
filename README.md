@@ -86,6 +86,8 @@ Add to `~/.config/amp/settings.json`:
 This enables automatic handoff when context fills up, allowing Ralph to handle large stories that exceed a single context window.
 
 > **Note:** I use `75` here — I found it works better for my projects which tend to have larger files and more complex refactors. The original README suggests `80` or `85`, but I was occasionally getting handoffs mid-function. Adjust to taste based on your project size.
+>
+> **Update:** After more experimentation I've settled on `70` for monorepos with lots of generated files (e.g. lockfiles, build artifacts). If your repo is lean and well-gitignored, `75` should be fine.
 
 ## Workflow
 
@@ -99,6 +101,4 @@ Load the prd skill and create a PRD for [your feature description]
 
 Answer the clarifying questions. The skill saves output to `tasks/prd-[feature-name].md`.
 
-### 2. Convert PRD to Ralph format
-
-Use the Ralph skill to convert the 
+### 2. Convert PRD to Ralph f
