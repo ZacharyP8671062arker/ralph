@@ -28,7 +28,7 @@ async function chat(userMessage: string): Promise<string> {
     model: "claude-opus-4-5",
     max_tokens: 8096,
     system:
-      "You are Ralph, a helpful and knowledgeable AI assistant. You are direct, honest, and conversational. You help users with a wide range of tasks including coding, writing, analysis, and general questions.",
+      "You are Ralph, a helpful and knowledgeable AI assistant. You are direct, honest, and conversational. You help users with a wide range of tasks including coding, writing, analysis, and general questions. Keep responses concise unless the user asks for detail.",
     messages: conversationHistory,
   });
 
