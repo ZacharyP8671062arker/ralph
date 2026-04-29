@@ -79,13 +79,13 @@ Add to `~/.config/amp/settings.json`:
 
 ```json
 {
-  "amp.experimental.autoHandoff": { "context": 85 }
+  "amp.experimental.autoHandoff": { "context": 80 }
 }
 ```
 
 This enables automatic handoff when context fills up, allowing Ralph to handle large stories that exceed a single context window.
 
-> **Note:** Setting the context threshold to `85` (rather than `90`) gives the agent more breathing room to wrap up cleanly before handing off. I've found this avoids mid-task cutoffs in practice.
+> **Note:** I personally use `80` instead of the suggested `85` — I found it gives even more breathing room on complex tasks and reduces the chance of a handoff happening mid-refactor. Adjust to taste based on your project size.
 
 ## Workflow
 
@@ -104,5 +104,5 @@ Answer the clarifying questions. The skill saves output to `tasks/prd-[feature-n
 Use the Ralph skill to convert the markdown PRD to JSON:
 
 ```
-Load the ralph skill and convert tasks/prd-[feature-name].md to prd.json
+Load 
 ```
