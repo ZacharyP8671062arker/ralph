@@ -50,3 +50,5 @@ npm run dev
 
 - I default to `--tool claude` since that's what I have access to; swap if you add Amp later
 - Keep PRD stories granular — I found that anything touching more than ~2 files tends to stall mid-iteration
+- I like to set `max_iterations` to 5 when exploring a new PRD, then bump it up once I trust the story breakdown
+- If an iteration ends with no git commit, it usually means the story was too vague — tighten the acceptance criteria
