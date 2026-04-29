@@ -88,17 +88,11 @@ This enables automatic handoff when context fills up, allowing Ralph to handle l
 > **Note:** I use `75` here — I found it works better for my projects which tend to have larger files and more complex refactors. The original README suggests `80` or `85`, but I was occasionally getting handoffs mid-function. Adjust to taste based on your project size.
 >
 > **Update:** After more experimentation I've settled on `70` for monorepos with lots of generated files (e.g. lockfiles, build artifacts). If your repo is lean and well-gitignored, `75` should be fine.
+>
+> **Personal note:** I'm currently running `65` on a legacy codebase with a lot of large auto-generated GraphQL schema files. If your project is similarly heavy on generated output, erring lower is worth it — I haven't seen a mid-function handoff since dropping from `70`.
 
 ## Workflow
 
 ### 1. Create a PRD
 
-Use the PRD skill to generate a detailed requirements document:
-
-```
-Load the prd skill and create a PRD for [your feature description]
-```
-
-Answer the clarifying questions. The skill saves output to `tasks/prd-[feature-name].md`.
-
-### 2. Convert PRD to Ralph f
+Use the PRD skill to generate a detailed requirements do
