@@ -73,5 +73,5 @@ Only update CLAUDE.md if you have **genuinely reusable knowledge** that would he
 ## Personal Notes
 
 <!-- Personal reminders for my fork -->
-- After finishing a session, run `git push origin <branch>` so progress is backed up to my fork.
-- If the PRD has no remaining `passes: false` stories, stop and print a summary instead of looping.
+- After finishing a session, run `git push origin <branch>` to keep the remote fork in sync.
+- If the PRD seems stale or out of date, cross-check with open issues before starting work.
