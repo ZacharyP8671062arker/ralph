@@ -70,8 +70,9 @@ Before committing, check if any edited files have learnings worth preserving in 
 
 Only update CLAUDE.md if you have **genuinely reusable knowledge** that would help future work in that area.
 
-## Personal Notes
+## Personal Notes (fork-specific)
 
-<!-- Personal reminders for my fork -->
-- After finishing a session, run `git push origin <branch>` to keep the remote fork in sync.
-- If the PRD seems stale or out of date, cross-check with open issues before starting work.
+<!-- I'm using this fork to learn how autonomous agents handle multi-step tasks.
+     Keeping stories small (1-2 acceptance criteria each) works best for clean commits. -->
+- Prefer smaller, focused stories over large ones to make progress easier to review.
+- If `progress.txt` grows beyond ~300 lines, consider archiving older entries to `progress.archive.txt`.
