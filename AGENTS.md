@@ -52,3 +52,5 @@ npm run dev
 - Keep PRD stories granular — I found that anything touching more than ~2 files tends to stall mid-iteration
 - I like to set `max_iterations` to 5 when exploring a new PRD, then bump it up once I trust the story breakdown
 - If an iteration ends with no git commit, it usually means the story was too vague — tighten the acceptance criteria
+- I set a personal cap of `max_iterations=10` as a safety net — runaway loops can burn through API credits fast
+- After a successful run, I tag the commit (`git tag prd-complete-v<n>`) so I can easily diff what Ralph produced
